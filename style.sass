@@ -1,0 +1,639 @@
+/*
+	*Theme Name: Van 360 Maya
+	*Theme URI:
+	*Description: Custom theme for Van 360 Maya
+	*Author: WeRTheD
+	*Author URI:
+	*Template: blankslate
+	*Version: 1.0.2
+	*/
+
+@import '../bourbon/_bourbon'
+
+$turquesa: #169e9a
+$turquesa-o: #336666
+$carne: #cc9966
+$body-size: 18px
+$family-primary: 'Optima',sans-serif
+$transition: all 0.25s ease-in
+/*$primary: #3885c6
+	$azul: #3885c6
+	$title: #87b6de
+	
+
+	$tablet: 769px !default
+
+	$weight-light: 300
+	$weight-normal: 500
+	$weight-semibol: 900
+	$weight-bold: 900*/
+=gradient-horizontal($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%)
+	background-image: -webkit-linear-gradient(left, $start-color $start-percent, $end-color $end-percent)
+	background-image: -o-linear-gradient(left, $start-color $start-percent, $end-color $end-percent)
+	background-image: linear-gradient(to right, $start-color $start-percent, $end-color $end-percent)
+	background-repeat: repeat-x
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=1)
+
+=gradient-vertical($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%)
+	background-image: -webkit-linear-gradient(top, $start-color $start-percent, $end-color $end-percent)
+	background-image: -o-linear-gradient(top, $start-color $start-percent, $end-color $end-percent)
+	background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent)
+	background-repeat: repeat-x
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=0)
+
+@import "../bulma/sass/utilities/initial-variables.sass"
+@import "../bulma/sass/utilities/functions.sass"
+@import "../bulma/sass/utilities/derived-variables.sass"
+//@import "../bulma/sass/utilities/animations.sass"
+@import "../bulma/sass/utilities/mixins.sass"
+@import "../bulma/sass/utilities/controls.sass"
+//base
+@import "../bulma/sass/base/minireset.sass"
+@import "../bulma/sass/base/generic.sass"
+@import "../bulma/sass/base/helpers.sass"
+//elements
+//@import "../bulma/sass/elements/box.sass"
+//@import "../bulma/sass/elements/button.sass"
+@import "../bulma/sass/elements/container.sass"
+@import "../bulma/sass/elements/content.sass"
+//@import "../bulma/sass/elements/form.sass"
+//@import "../bulma/sass/elements/icon.sass"
+@import "../bulma/sass/elements/image.sass"
+//@import "../bulma/sass/elements/notification.sass"
+//@import "../bulma/sass/elements/progress.sass"
+//@import "../bulma/sass/elements/table.sass"
+//@import "../bulma/sass/elements/tag.sass"
+@import "../bulma/sass/elements/title.sass"
+@import "../bulma/sass/elements/other.sass"
+//components
+//@import "../bulma/sass/components/breadcrumb.sass"
+//@import "../bulma/sass/components/card.sass"
+//@import "../bulma/sass/components/level.sass"
+//@import "../bulma/sass/components/media.sass"
+//@import "../bulma/sass/components/menu.sass"
+//@import "../bulma/sass/components/message.sass"
+//@import "../bulma/sass/components/modal.sass"
+//@import "../bulma/sass/components/nav.sass"
+//@import "../bulma/sass/components/navbar.sass"
+//@import "../bulma/sass/components/pagination.sass"
+//@import "../bulma/sass/components/panel.sass"
+//@import "../bulma/sass/components/tabs.sass"
+//grid
+@import "../bulma/sass/grid/_all.sass"
+@import "../bulma/sass/layout/_all.sass"
+
+@font-face
+	font-family: 'Optima'
+	src: url('fonts/Optima-ExtraBlack.eot')
+	src: url('fonts/Optima-ExtraBlack.eot?#iefix') format('embedded-opentype'),url('fonts/Optima-ExtraBlack.woff') format('woff'),url('fonts/Optima-ExtraBlack.ttf') format('truetype')
+	font-weight: 900
+	font-style: normal
+
+@font-face
+	font-family: 'Optima'
+	src: url('fonts/Optima-Bold.eot')
+	src: url('fonts/Optima-Bold.eot?#iefix') format('embedded-opentype'),url('fonts/Optima-Bold.woff') format('woff'),url('fonts/Optima-Bold.ttf') format('truetype')
+	font-weight: bold
+	font-style: normal
+
+@font-face
+	font-family: 'Optima'
+	src: url('fonts/Optima-Regular.eot')
+	src: url('fonts/Optima-Regular.eot?#iefix') format('embedded-opentype'),url('fonts/Optima-Regular.woff') format('woff'),url('fonts/Optima-Regular.ttf') format('truetype')
+	font-weight: normal
+	font-style: normal
+
+.image
+	box-shadow: 0 0 30px rgba(0,0,0,0.24)
+	box-sizing: border-box
+	margin: 0 auto 1em
+	padding: 5%
+	width: 100%
+	&:first-child
+		margin-top: 0
+	img
+		display: block !important
+
+html
+	-webkit-tap-highlight-color: transparent
+body
+	&.home
+		.hero
+			height: 100vh
+			max-height: none
+header,section.bottom,footer
+	left: 0
+	text-align: center
+	width: 100vw
+	.logo
+		img
+			display: block
+	nav
+		a
+			display: block
+			text-decoration: none
+header
+	background: #FFF
+	left: 0
+	position: fixed
+	top: 0
+	z-index: 99
+	.inner
+		nav
+			display: flex
+			position: relative
+			ul.languages li.current-lang a
+				color: $text
+
+			a
+				color: $turquesa
+				text-transform: uppercase
+.player
+	margin: auto
+	padding-top: 56.2%
+	position: relative
+	width: 100%
+	clear: both
+	iframe
+		height: 100%
+		left: 0
+		margin: auto
+		max-width: 940px
+		position: absolute
+		top: 0
+		width: 100%
+.player-thumbs
+	display: flex
+	justify-content: center
+	flex-flow: wrap row
+	margin: 20px -10px 0
+	a
+		display: block
+		flex: none
+		overflow: hidden
+		padding-top: 21%
+		margin: 0 0 20px
+		position: relative
+		width: 50%
+		figure
+			display: block
+			position: absolute
+			top: 50%
+			padding: 0 10px
+			transform: translateY(-50%)
+@media (max-width:768px)
+	header
+		.inner
+			display: flex
+			justify-content: space-between
+			.logo
+				display: block
+				margin: 10px 5vw
+				img
+					height: 40px
+			.toggle-menu
+				color: $primary
+				display: block
+				width: 40px
+				height: 40px
+				font-size: 24px
+				text-align: center
+				line-height: 40px
+				margin: 10px 5%
+			nav
+				background: #fafafa
+				border-radius: 4px
+				box-shadow: 0px 0px 15px 0 rgba(0, 0, 0, 0.25)
+				flex-flow: column-reverse
+				margin: auto
+				opacity: 0
+				padding: 6px 0
+				position: absolute
+				right: 5vw
+				top: 60px
+				transform-origin: top right
+				transform: scale(0)
+				transition: $transition
+				width: 60vw
+				ul
+					transition: $transition
+					text-align: left
+					ul
+						max-height: 0
+						overflow: hidden
+						li
+							&:not(:last-child):after
+								left: 10vw
+							a
+								padding-left: 10vw
+				li
+					position: relative
+					margin-bottom: 1px
+					&:after
+						background: rgba(0,0,0,0.05)
+						bottom: -1px
+						content: ''
+						display: block
+						height: 1px
+						left: 5vw
+						position: absolute
+						right: 5vw
+						width: auto
+					&.menu-item-has-children
+						& > a
+							&:after
+								-moz-osx-font-smoothing: grayscale
+								-webkit-font-smoothing: antialiased
+								content: '\F140'
+								display: inline-block
+								font-size: 30px
+								font: normal normal normal 24px/1 "Material Design Icons"
+								line-height: inherit
+								position: absolute
+								right: 5vw
+								text-rendering: auto
+								top: 50%
+								transform: translateY(-50%)
+				a
+					padding: 2vw 5vw
+					position: relative
+				&.contact
+					display: none
+				&.languages
+					display: flex
+					justify-content: center
+					li
+						&:after
+							content: none
+						a
+							&:not(:first-child)
+								border-top: 0
+								border-right: 1px solid rgba(0, 0, 0, 0.1)
+				&.visible-menu
+					opacity: 1
+					transform: none
+					&.visible-submenu
+						ul
+							ul
+								max-height: 50vh
+@media (min-width:768px)
+	header
+		.inner
+			height: 110px
+			display: flex
+			padding: 16px 4vw
+			position: relative
+			width: 100vw
+			justify-content: space-between
+			align-items: center
+			.logo
+				img
+					height: 58px
+			.toggle-menu
+				display: none
+			nav
+				align-items: flex-end
+				flex-flow: wrap column
+				font-size: 16px
+				& > ul
+					height: 24px
+				a
+					&:hover
+						color: $turquesa-o
+			ul
+				display: flex
+				flex-wrap: wrap
+				position: relative
+				li
+					line-height: 24px
+					margin-left: 16px
+					position: relative
+					&:first-child
+						margin-left: 0
+					&:hover
+						ul
+							opacity: 1
+							max-height: 25vw
+
+				&.contact
+					margin-bottom: 20px
+					&:after
+						background: -moz-linear-gradient(left, rgba(22,158,154,0) 0%, rgba(22,158,154,1) 100%)
+						background: -webkit-linear-gradient(left, rgba(22,158,154,0) 0%,rgba(22,158,154,1) 100%)
+						background: linear-gradient(to right, rgba(22,158,154,0) 0%,rgba(22,158,154,1) 100%)
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00169e9a', endColorstr='#169e9a',GradientType=1 )
+						content: ''
+						display: block
+						height: 1px
+						position: absolute
+						bottom: -10px
+						width: 100%
+					i
+						color: $turquesa
+						font-size: 20px
+						vertical-align: middle
+				&.languages
+					position: absolute
+					left: 0
+				ul
+					display: block
+					flex-direction: column
+					left: 50%
+					max-height: 0
+					opacity: 0
+					overflow: hidden
+					padding-top: 10px
+					position: absolute
+					top: 100%
+					transform: translateX(-50%)
+					transition: all 0.25s ease-in
+					&:before
+						background-color: #FFF
+						border-radius: 4px
+						box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, 0.1)
+						display: block
+						content: ''
+						position: absolute
+						top: 10px
+						right: 0
+						bottom: 0
+						left: 0
+					li
+						line-height: 1
+						margin-left: 0
+						padding: 0 20px
+						&:not(:first-child)
+							a
+								border-top: 1px solid rgba(0, 0, 0, 0.1)
+					a
+						line-height: 1.1
+						padding: 9px 0
+								
+	.grid__gutter-size
+		width: 1.5rem
+		position: absolute
+.inner
+	box-sizing: border-box
+	margin: auto
+	width: 100vw
+
+
+.light-gradient
+	@include gradient-vertical(#c6e3e0, #049F9D, 50%, 100%)
+
+.dark-gradient
+	@include gradient-vertical(#14222b, #245961, 50%, 100%)
+
+.cycle-slideshow
+	width: 100%
+	span
+		display: block
+		margin: 10px 10px 0
+	img
+		height: 10vw
+	.mdi 
+		position: absolute
+		top: 50%
+		z-index: 999
+		color: #FFF
+		font-size: 40px
+		text-shadow: 0 0 10px #000
+		transform: translateY(-50%)
+		&.cycle-prev
+			left: 0
+		&.cycle-next
+			right: 0
+
+section
+	padding-top: 60px
+	position: relative
+	width: 100vw
+	&.welcome,
+	&.bienvenido
+		padding-top: 0
+	.inner
+		width: 75vw
+	.content
+		overflow: hidden
+		figure
+			display: block
+		ul
+			overflow: hidden
+			padding-left: 18px
+			margin: 0
+	.hero
+		align-content: center
+		background-position: 50% 32%
+		background-repeat: no-repeat
+		background-size: cover
+		display: flex
+		flex-flow: wrap
+		height: 42vw
+		margin: auto
+		width: 100%
+		.container
+			align-self: center
+	h1,h2
+		&.title-hero
+			text-shadow: 0 0 12px rgba(0,0,0,0.42)
+			color: #FFF
+			line-height: 0.8
+			text-align: center
+			text-transform: uppercase
+		&.title-content
+			line-height: 1
+			position: relative
+			small,span,strong
+				position: relative
+			span,strong
+				display: block
+			small,span
+				font-weight: normal
+				white-space: nowrap
+			small
+				color: $carne
+				&.right
+					display: block
+				&.bottom
+					display: inline-block
+			span
+				color: #003333
+			strong
+				color: $turquesa-o
+	h1
+		&.title-hero
+			font-size: 32px
+			font-weight: 700
+			margin-bottom: 2vw
+		&.title-content
+			font-size: 7.5vw
+			small
+				font-size: 5vw
+				line-height: 2
+	h2
+		&.title-hero
+			font-size: 60px
+		&.title-content
+			font-size: 7.6vw
+			padding: 0 10vw
+			small
+				font-size: 24px
+				&.right
+					line-height: 40px
+					transform: translateX(-1.4vw)
+					&:after
+						width: 80px
+				&.bottom
+					margin-top: 1.4vw
+	&.dance
+		padding-top: 0  
+	&.bottom
+		padding: 40px 0
+		text-align: center
+		.logo
+			display: block
+			margin: 20px auto
+			max-width: 320px
+			width: 60%
+		nav
+			display: flex
+			font-size: 0
+			margin: auto
+			padding-bottom: 20px
+			padding-top: 20px
+			justify-content: space-around
+			a
+				font-size: 24px
+				margin: 0 4vw
+				position: relative
+				width: 12.5%
+				&:before,&:after
+					content: ''
+					display: block
+					@include border-top-radius(100%)
+					@include border-right-radius(100%)
+					@include border-bottom-radius(100%)
+					@include border-left-radius(100%)
+				&:before
+					background-color: #000
+					padding-bottom: 100%
+					width: 100%
+				&:after
+					transform: translate(-50%,-50%) scale(1.4)
+					border: 1px solid #000
+					height: 100%
+					left: 50%
+					position: absolute
+					top: 50%
+					width: 100%
+				i
+					color: #DFEBE9
+					left: 50%
+					position: absolute
+					top: 50%
+					transform: translate(-50%,-50%)
+@media (max-width: 768px)
+	section			
+		h1
+			&.title-content
+				padding: 0 10vw
+		.container
+			.content
+				font-size: 85%
+				padding: 5vw 7.5vw
+	.grid__item
+		&:not(:last-child)
+			margin-bottom: 1.5em
+
+
+@media (min-width: 768px)
+	.image
+		padding: 30px
+		margin: 4.5%
+		width: 42.5%
+		&.left
+			float: left
+			margin-left: 1.5%
+			margin-right: 8.5%
+		&.right
+			float: right
+			margin-left: 8.5%
+			margin-right: 1.5%
+	section
+		h1
+			&.title-hero
+				font-size: 32px
+				margin-bottom: 2vw
+			&.title-content
+				font-size: 40px
+				margin-left: 10vw
+				small
+					font-size: 24px
+					&.right
+						line-height: 42px
+						transform: translateX(-2vw)
+						right: 100%
+						position: absolute
+						&:after
+							border-bottom: 1px solid $carne
+							bottom: -12px
+							content: ''
+							display: block
+							position: absolute
+							right: 0
+							width: 60%
+					&.bottom
+						margin-top: 2vw
+						&:after
+							border-bottom: 1px solid $carne
+							bottom: 50%
+							content: ''
+							display: block
+							height: 1px
+							left: 100%
+							position: absolute
+							transform: translateX(2vw)
+							width: 100%
+		.content
+			overflow: hidden
+			padding: 4.5vw 7.5vw
+			.columns
+				clear: both
+		&.bottom
+			nav
+				margin-left: 25%
+				margin-right: 25%
+				a
+					font-size: 30px
+					max-width: 60px
+	.grid__item,
+	.grid__col-sizer
+		width: 49%
+
+	.grid__gutter-sizer
+		width: 2%
+
+	.grid.are-images-unloaded .image-grid__item
+		opacity: 0
+
+	.grid__item
+		margin-bottom: 2%
+		position: relative
+		float: left
+footer
+	bottom: 0
+	width: 100%
+	ul
+		margin: 0
+		padding: 0
+		li
+			align-items: center
+			color: #FFF
+			display: flex
+			height: 40px
+			justify-content: center
+			vertical-align: top
+			i
+				color: #245961
+				font-size: 24px
+				margin-right: 5px
